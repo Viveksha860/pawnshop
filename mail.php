@@ -1,15 +1,37 @@
 <?php
+include "./include/connect.php";
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])){
+
+    $name = mysqli_real_escape_string($conn,$_POST['name']);
+    $email = mysqli_real_escape_string($conn,$_POST['email']);
+    $subject = mysqli_real_escape_string($conn,$_POST['subject']);
+    $message = mysqli_real_escape_string($conn,$_POST['message']);
+
+    if($_POST['name'] != '' && $_POST['email'] != '' && $_POST['subject'] != '' && $_POST['message'] != ''){
+        $result = $conn->query("INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `created_at`) VALUES (NULL, '$name', '$email', '$subject', '$message', CURRENT_TIMESTAMP);");
+        if($result){
+            echo "Inserted Sucessfully";
+        }else{
+            echo "something went wrong!!".$conn->error;
+
+        }
+    }else{
+        echo "Data Missing";
+    }
+ 
+}else{
+    echo "Invalid request";
+}
+
+exit;
 
 $mailheader = "From:".$name."<".$email.">\r\n";
 
 $recipient = "example@gmail.com";
 
-mail($recipient, $subject, $message, $mailheader) or die("Error!");
+// mail($recipient, $subject, $message, $mailheader) or die("Error!");
 
 echo'
 
