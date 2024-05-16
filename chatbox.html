@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pawnshop Chatbox</title>
+  <style>
+  .chat-container {
+    position: relative;
+    left:700px;
+    bottom: 10px;
+    right: 50px;
+    top:500px;
+  }
+  
+  .chat-box {
+    width: 500px;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .chat-messages {
+    max-height: 800px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    color: rgb(255, 238, 0);
+    font-size: 30px;
+  }
+  
+  #message-input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 5px;
+    font-size:20px ;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="chat-messages" id="chat-messages">
+        <!-- Chat messages will be displayed here -->
+      </div>
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="chatbox.js"></script>
+</body>
+</html>

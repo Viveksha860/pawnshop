@@ -10,22 +10,15 @@ body {
   color: #333;
 }
 
-.background-image {
-  background-image: url('images/IMG-20240410-WA0004.jpg');
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.9;
-  padding-bottom: 100px;
 
+
+.chatbox{
+  position: relative;
+  left: 850px;
+  top:40px;  
+  font-size: 20px;
 }
 
-.title {
-  background-color: antiquewhite;
-  color: black;
-  padding: 4px;
-
-}
 
 .container {
   max-width: 1200px;
@@ -34,32 +27,52 @@ body {
 }
 
 header {
-  background-color: rgb(13, 140, 140);
+  background-color: rgb(14, 16, 16);
   color: #fff;
   padding: 25;
-
 }
 
 header h1 {
   font-size: 36px;
   padding: 5px;
 }
-
+.cart{
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  left: 900px;
+  bottom:80px;
+}
+.login-page{
+  position: relative;
+  left: 800px;
+  bottom: 150px;  
+  font-size: 20px;
+}
+.signup-page{
+  position: relative;
+  left: 800px;
+  bottom: 130px;
+  font-size: 20px;
+  
+}
 nav ul {
   list-style: none;
-  padding: 5px;
+  padding: 0;
+  margin:0;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 0px;
-  padding: 5px;
+  display: inline-block;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 5px;
+  padding: 25px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav ul li a.active {
@@ -112,6 +125,46 @@ a:hover {
   transition: background-color 0.3s;
 }
 
+
+.featured-items {
+  padding: 50px 0;
+}
+
+.featured-items h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 50%;
+  position: relative;
+  left: 280px;
+}
+
+.item img {
+  width: 70%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 18px;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+
 footer {
   background-color: #333;
   color: #fff;
@@ -132,10 +185,9 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display',
-        serif;
-    font-size: 59px;
-    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    color:orange;
     font-weight: 600;
     padding-bottom: 20px;
 }
